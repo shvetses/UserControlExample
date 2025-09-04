@@ -5,30 +5,54 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Task_05"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow" Height="450" Width="400">
+    Title="MainWindow"
+    Width="400"
+    Height="450">
     <UniformGrid Rows="3">
-        <Path Fill="Red" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Path
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Fill="Red"
+            Stroke="Black">
             <Path.Data>
-                <PathGeometry FillRule="Nonzero">
-                    <PathFigure StartPoint="10,100" IsClosed="True">
-                        <LineSegment Point="100,100"/>
-                        <LineSegment Point="100,50"/>
+                <PathGeometry FillRule="EvenOdd">
+                    <PathFigure IsClosed="True" StartPoint="10,100">
+                        <LineSegment Point="100,100" />
+                        <LineSegment Point="100,50" />
                     </PathFigure>
-                    <PathFigure StartPoint="10,10" IsClosed="True">
-                        <ArcSegment Point="250,50" Size="150,150" SweepDirection="Counterclockwise" IsLargeArc="False"/>
+                    <PathFigure IsClosed="True" StartPoint="10,100">
+                        <ArcSegment
+                            IsLargeArc="False"
+                            Point="250, 50"
+                            Size="150,150"
+                            SweepDirection="Counterclockwise" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+
+        </Path>
+        <Path
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Stroke="Black">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="60,10">
+                        <BezierSegment
+                            Point1="180,30"
+                            Point2="100,140"
+                            Point3="210,150" />
                     </PathFigure>
                 </PathGeometry>
             </Path.Data>
         </Path>
-        <Path Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Path.Data>
-                <PathGeometry FillRule="Nonzero">
-                    <PathFigure StartPoint="60,10" IsClosed="False">
-                        <BezierSegment Point1="180,30" Point2="100,140" Point3="210,150"/>
-                    </PathFigure>
-                </PathGeometry>
-            </Path.Data>
-        </Path>
-        <Path Stroke="Red" Fill="Green" Data="M 100,50 L 100,120 L250,120 Z"/>
+        <Path
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Data="M 100,50 L 100, 120 L250,120Z"
+            Fill="Green"
+            Stroke="Red" />
+
+
     </UniformGrid>
 </Window>
